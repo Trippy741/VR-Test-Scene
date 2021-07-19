@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/LobbyScene.unity
     guid: 340671f1de31e0f45b3a62ec2c6dfedf
   - enabled: 1
-    path: Assets/Scenes/ForestScene.unity
+    path: Assets/Scenes/BeachScene.unity
     guid: 437bdb7b6a34d0c4ba5dd16c0165e8d1
   - enabled: 1
     path: Assets/Scenes/Final Credits.unity
