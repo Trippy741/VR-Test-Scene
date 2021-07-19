@@ -1708,8 +1708,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.8490566, g: 0.14017442, b: 0.14017442, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
+    m_PressedColor: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -2586,7 +2586,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u05DC\u05E6\u05D0\u05EA"
+  m_text: "\u05D9\u05E6\u05D9\u05D0\u05D4"
   m_isRightToLeft: 1
   m_fontAsset: {fileID: 11400000, guid: 0b8894a8273f2c945a546d8f4eca14a4, type: 2}
   m_sharedMaterial: {fileID: 1577135440531737354, guid: 0b8894a8273f2c945a546d8f4eca14a4,
@@ -2656,7 +2656,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2121429932}
-    characterCount: 4
+    characterCount: 5
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -2697,7 +2697,7 @@ PrefabInstance:
     - target: {fileID: 430040488841866431, guid: 7fbef9c4b307fc14d9d77d25f2c75e75,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 430040489135117880, guid: 7fbef9c4b307fc14d9d77d25f2c75e75,
         type: 3}
