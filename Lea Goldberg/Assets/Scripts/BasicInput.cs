@@ -7,11 +7,14 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class BasicInput : MonoBehaviour
 {
-    private XRController Controller;
     public UnityEvent OnPauseMenuButton = new UnityEvent();
+    private List<InputDevice> devices;
+    
     private void Start()
     {
-        Controller = GetComponent<XRController>();
+        List<InputDevice> devices = new List<InputDevice>();
+        InputDevices.GetDevices(devices);
+
     }
     void Update()
     {
@@ -20,6 +23,14 @@ public class BasicInput : MonoBehaviour
     public bool PauseMenuButton()
     {
         OnPauseMenuButton?.Invoke();
-        return Controller.inputDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool menuButton);
+        foreach (InputDevice Controller in devices)
+        {
+            if (Controller != null)
+            {
+                Debug.Log("Pressing the pause menu button!!!");
+                return Controller.TryGetFeatureValue(CommonUsages.primaryButton, out bool menuButton);
+            }
+        }
+        return false;
     }
 }
