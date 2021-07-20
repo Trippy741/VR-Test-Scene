@@ -16,7 +16,7 @@ public class levelChanger : MonoBehaviour
     }
     public void FadeToNextLevel()
     {
-        if (SceneManager.sceneCount >= SceneManager.GetActiveScene().buildIndex + 1)
+        if (SceneManager.sceneCount > SceneManager.GetActiveScene().buildIndex + 1)
             FadeToLevel(SceneManager.GetActiveScene().buildIndex + 1);
         else
             ReplayScene();
