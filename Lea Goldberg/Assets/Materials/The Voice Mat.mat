@@ -23,7 +23,7 @@ Material:
   m_Name: The Voice Mat
   m_Shader: {fileID: -6465566751694194690, guid: d9dbae3680ee4c4458a90e328a884abc,
     type: 3}
-  m_ShaderKeywords: _BLENDMODE_ADD _ENABLE_FOG_ON_TRANSPARENT _SURFACE_TYPE_TRANSPARENT
+  m_ShaderKeywords: _BLENDMODE_ADD _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -176,7 +176,7 @@ Material:
     - _EmissiveIntensity: 1
     - _EmissiveIntensityUnit: 0
     - _EnableBlendModePreserveSpecularLighting: 1
-    - _EnableFogOnTransparent: 1
+    - _EnableFogOnTransparent: 0
     - _EnableGeometricSpecularAA: 0
     - _EnergyConservingSpecularColor: 1
     - _HeightAmplitude: 0.02
@@ -250,6 +250,8 @@ Material:
     - _ZWrite: 0
     m_Colors:
     - Color_6FBF8C08: {r: 766.9961, g: 220.86275, b: 0, a: 0}
+    - GlowColor: {r: 753.5094, g: 244.99754, b: 0, a: 0}
+    - GreenGlow: {r: 0, g: 7.377211, b: 0.223636, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
