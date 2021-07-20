@@ -1,44 +1,68 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Transitioner : MonoBehaviour
 {
     public AudioSource audioSource;
     public Renderer rend;
+    UnityEvent event1;
     bool is1 = false;
     // Start is called before the first frame update
     void Start()
     {
         rend = GetComponent<Renderer>();
-        rend.material.shader = Shader.Find("The Voice");//Gets the Shader
+        event1 = new UnityEvent();
+        event1.AddListener(Ping1);
+        Invoke(nameof(Ping1), 24f);
+        //rend.material.shader = Shader.Find("The Voice");//Gets the Shader
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator FillOverTime(float num, float increment, float pause, bool isReverse)
     {
-        
-        
-        if (audioSource.time >= 5f)
+        if (isReverse)
         {
-            is1 = true; ;
+            for (float i = num; i >= 0; i -= increment)
+            {
+                rend.material.SetFloat("Fill", i);
+                yield return new WaitForSeconds(pause);
+            }
         }
 
-        if (is1)
+        else
         {
-            Debug.LogError("bruh");
-            StartCoroutine(Transition());
-        }
-        //Debug.Log(audio.timeSamples);
+            for (float i = 0; i <= num; i += increment)
+            {
+                rend.material.SetFloat("Fill", i);
+                yield return new WaitForSeconds(pause);
+            }
+        }        
     }
 
-    IEnumerator Transition()
+    IEnumerator ColorOverTime(float num, float increment, float pause, bool isReverse)
     {
-        for (float ft = 1f; ft >= 0; ft -= 0.1f)
+        if (isReverse)
         {
-            rend.material.SetFloat(rend.material.shader.name, 1f);
-            Debug.Log("ft");
-            yield return new WaitForSeconds(.1f);
+            for (float i = num; i >= 0; i -= increment)
+            {
+                rend.material.SetColor("GlowColor", Color.green);
+                yield return new WaitForSeconds(pause);
+            }
         }
+
+        else
+        {
+            for (float i = 0; i <= num; i += increment)
+            {
+                rend.material.SetFloat("Fill", i);
+                yield return new WaitForSeconds(pause);
+            }
+        }
+    }
+
+    void Ping1()
+    {
+        StartCoroutine(FillOverTime(5, 0.1f, 0.05f, true));
     }
 }
