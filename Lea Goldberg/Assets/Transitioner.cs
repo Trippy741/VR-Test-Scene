@@ -15,7 +15,8 @@ public class Transitioner : MonoBehaviour
         rend = GetComponent<Renderer>();
         event1 = new UnityEvent();
         event1.AddListener(Ping1);
-        Invoke(nameof(Ping1), 24f);
+        //Invoke(nameof(Ping1), 24f);
+        //Invoke(nameof(Ping2), 26.5f);
         //rend.material.shader = Shader.Find("The Voice");//Gets the Shader
     }
 
@@ -44,16 +45,16 @@ public class Transitioner : MonoBehaviour
     {
         if (isReverse)
         {
-            for (float i = num; i >= 0; i -= increment)
+            for (float i = num; i >= 1; i -= increment)
             {
-                rend.material.SetColor("GlowColor", Color.green);
+                rend.material.SetFloat("Fill", i);
                 yield return new WaitForSeconds(pause);
             }
         }
 
         else
         {
-            for (float i = 0; i <= num; i += increment)
+            for (float i = 1; i <= num; i += increment)
             {
                 rend.material.SetFloat("Fill", i);
                 yield return new WaitForSeconds(pause);
@@ -63,6 +64,11 @@ public class Transitioner : MonoBehaviour
 
     void Ping1()
     {
-        StartCoroutine(FillOverTime(5, 0.1f, 0.05f, true));
+        StartCoroutine(FillOverTime(5, 0.1f, 0.05f, false));
+    }
+
+    void Ping2()
+    {
+        StartCoroutine(FillOverTime(5, 0.1f, 0.05f, false));
     }
 }
