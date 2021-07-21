@@ -10,7 +10,7 @@ Material:
   m_Name: The Cube
   m_Shader: {fileID: -6465566751694194690, guid: d7a3a6ada4677834ea323796a70e5855,
     type: 3}
-  m_ShaderKeywords: _NORMALMAP_TANGENT_SPACE
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -111,6 +111,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_C3B63E7A: 3.53
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
@@ -233,6 +234,7 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
+    - Color_B7C86543: {r: 67.79352, g: 8.518557, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
