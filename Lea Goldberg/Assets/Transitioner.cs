@@ -15,7 +15,10 @@ public class Transitioner : MonoBehaviour
         rend = GetComponent<Renderer>();
         event1 = new UnityEvent();
         event1.AddListener(Ping1);
-        //Invoke(nameof(Ping1), 24f);
+        Invoke(nameof(Ping1), 24f);
+        Color dacolor = rend.material.GetColor("GlowColor");
+        dacolor.a = 0f;
+        rend.material.SetColor("GlowColor", dacolor);
         //Invoke(nameof(Ping2), 26.5f);
         //rend.material.shader = Shader.Find("The Voice");//Gets the Shader
     }
