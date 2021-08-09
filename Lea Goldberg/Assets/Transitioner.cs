@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class Transitioner : MonoBehaviour
 {
+    public Animator animator;
+    public string[] animationTriggers;
     public AudioSource audioSource;
     public Renderer rend;
     UnityEvent event1;
@@ -15,6 +17,11 @@ public class Transitioner : MonoBehaviour
         rend = GetComponent<Renderer>();
         event1 = new UnityEvent();
         event1.AddListener(Ping1);
+        Invoke(nameof(Ping3), 89f);
+        Invoke(nameof(Ping4), 300f);
+        Color color = rend.material.GetColor("GlowColor");
+        color.a = 0;
+        rend.material.SetColor("GlowColor",color);
         //Invoke(nameof(Ping1), 24f);
         //Invoke(nameof(Ping2), 26.5f);
         //rend.material.shader = Shader.Find("The Voice");//Gets the Shader
@@ -61,6 +68,7 @@ public class Transitioner : MonoBehaviour
             }
         }
     }
+    
 
     void Ping1()
     {
@@ -70,5 +78,13 @@ public class Transitioner : MonoBehaviour
     void Ping2()
     {
         StartCoroutine(FillOverTime(5, 0.1f, 0.05f, false));
+    }
+    void Ping3()
+    {
+        animator.SetTrigger(animationTriggers[0]);
+    }
+    void Ping4()
+    {
+        levelChanger.Instance.FadeToNextLevel();
     }
 }
