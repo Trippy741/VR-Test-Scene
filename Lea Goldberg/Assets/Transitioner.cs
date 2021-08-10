@@ -9,6 +9,7 @@ public class Transitioner : MonoBehaviour
     public Renderer rend;
     UnityEvent event1;
     bool is1 = false;
+    [SerializeField] [ColorUsage(true, true)] Color color;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +17,15 @@ public class Transitioner : MonoBehaviour
         event1 = new UnityEvent();
         event1.AddListener(Ping1);
         Invoke(nameof(Ping1), 24f);
-        Color dacolor = rend.material.GetColor("GlowColor");
-        dacolor.a = 0f;
-        rend.material.SetColor("GlowColor", dacolor);
+        color = rend.material.GetColor("GlowColor");
+        rend.material.SetColor("GlowColor", color);
         //Invoke(nameof(Ping2), 26.5f);
         //rend.material.shader = Shader.Find("The Voice");//Gets the Shader
+    }
+
+    private void Update()
+    {
+        rend.material.SetColor("GlowColor", color);
     }
 
     IEnumerator FillOverTime(float num, float increment, float pause, bool isReverse)
