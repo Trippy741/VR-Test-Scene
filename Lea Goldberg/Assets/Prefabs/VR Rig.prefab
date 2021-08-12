@@ -285,6 +285,6 @@ MonoBehaviour:
   m_RigBaseGameObject: {fileID: 2707711929900348443}
   m_CameraFloorOffsetObject: {fileID: 2707711929534646512}
   m_CameraGameObject: {fileID: 2707711928023178766}
-  m_TrackingOriginMode: 2
+  m_TrackingOriginMode: 1
   m_TrackingSpace: 3
-  m_CameraYOffset: 1.36144
+  m_CameraYOffset: 1.6

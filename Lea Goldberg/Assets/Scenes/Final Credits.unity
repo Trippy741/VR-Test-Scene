@@ -191,6 +191,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 34538736}
   m_CullTransparentMesh: 0
+--- !u!114 &69691957 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 430040488841866418, guid: 7fbef9c4b307fc14d9d77d25f2c75e75,
+    type: 3}
+  m_PrefabInstance: {fileID: 1411980208}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1621b10eec310e48aeae546476a7ea3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &76410212
 GameObject:
   m_ObjectHideFlags: 0
@@ -2234,9 +2246,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1528948945}
   rend: {fileID: 1528948947}
-  color: {r: 41.00834, g: 14.49054, b: 1024, a: 1}
-  events: []
-  eventTiming: []
+  color: {r: 11.358076, g: 4.2592783, b: 271.17407, a: 1}
+  events:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 69691957}
+        m_MethodName: FadeToLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  eventTiming:
+  - 52
 --- !u!82 &1528948945
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2249,7 +2275,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8ad2fd3ce121ce148adf6786583daaa7, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.851
+  m_Volume: 0.596
   m_Pitch: 1
   Loop: 0
   Mute: 0
