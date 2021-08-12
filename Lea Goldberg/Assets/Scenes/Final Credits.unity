@@ -2213,7 +2213,6 @@ GameObject:
   - component: {fileID: 1528948946}
   - component: {fileID: 1528948945}
   - component: {fileID: 1528948944}
-  - component: {fileID: 1528948943}
   m_Layer: 0
   m_Name: The Voice
   m_TagString: Untagged
@@ -2221,25 +2220,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &1528948943
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1528948942}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 29a37e6a9e4059349aa51e20281c813f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1528948944
 MonoBehaviour:
   m_ObjectHideFlags: 0

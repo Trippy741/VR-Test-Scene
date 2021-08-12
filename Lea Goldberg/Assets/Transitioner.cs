@@ -34,6 +34,7 @@ public class Transitioner : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(Time.timeSinceLevelLoad);
         rend.material.SetColor("GlowColor", color);
     }
 
