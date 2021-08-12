@@ -2262,7 +2262,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   eventTiming:
-  - 52
+  - 30
 --- !u!82 &1528948945
 AudioSource:
   m_ObjectHideFlags: 0
