@@ -10,6 +10,9 @@ public class Transitioner : MonoBehaviour
     UnityEvent event1;
     bool is1 = false;
     [SerializeField] [ColorUsage(true, true)] Color color;
+
+    public UnityEvent[] events;
+    public float[] eventTiming;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +20,12 @@ public class Transitioner : MonoBehaviour
         event1 = new UnityEvent();
         event1.AddListener(Ping1);
         Invoke(nameof(Ping1), 24f);
+
+        for (int i = 0; i < events.Length; i++)
+        {
+            StartCoroutine(waitForEventCall(events[i],eventTiming[i]));
+        }
+
         color = rend.material.GetColor("GlowColor");
         rend.material.SetColor("GlowColor", color);
         //Invoke(nameof(Ping2), 26.5f);
@@ -69,7 +78,12 @@ public class Transitioner : MonoBehaviour
             }
         }
     }
-
+    IEnumerator waitForEventCall(UnityEvent E,float waitDuration)
+    {
+        yield return new WaitForSeconds(waitDuration);
+        E.Invoke();
+        Debug.Log("Triggering event!");
+    }
     void Ping1()
     {
         StartCoroutine(FillOverTime(5, 0.1f, 0.05f, false));
